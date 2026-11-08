@@ -2,7 +2,7 @@
 
 RaceDay is a full-stack, web-based event management system for the South African road running, walking, and cycling community. Part 3 implements the MVC Web Frontend that consumes the RESTful API, built with ASP.NET Core 8.0 MVC, Razor Views, and Bootstrap. It provides a polished, role-specific interface for Organisers and Participants, and is fully containerised using Docker.
 
-**Repository:** [https://github.com/ST10475058/RaceDay-POE-3.git](https://github.com/ST10475058/RaceDay-POE-3.git)
+**Repository:** https://github.com/ST10475058/RaceDay-POE-3.git
 
 ## Roles
 
