@@ -1,0 +1,48 @@
+﻿@model RaceDay.Web.Models.DTOs.EventDto
+@{
+    ViewData["Title"] = Model.EventName;
+    var categories = ViewBag.Categories as List<RaceDay.Web.Models.DTOs.CategoryDto> ?? new();
+}
+<div class="row">
+    <div class="col-md-8">
+        @if (!string.IsNullOrEmpty(Model.BannerUrl))
+        {
+            <img src="@Model.BannerUrl" class="img-fluid rounded mb-3" style="max-height:320px;width:100%;object-fit:cover;" />
+        }
+        <h1>@Model.EventName</h1>
+        <p class="text-muted">
+            📅 @Model.EventDate.ToString("dddd, dd MMMM yyyy")
+            &nbsp;|&nbsp; 📍 @Model.Location
+            &nbsp;|&nbsp; 🏃 @Model.Distance km
+            &nbsp;|&nbsp; <span class="badge bg-secondary">@Model.EventType</span>
+        </p>
+        <hr />
+        <p>@Model.Description</p>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+            <h5>Available Categories</h5>
+            @if (!categories.Any())
+            {
+                <p class="text-muted">No categories yet.</p>
+            }
+            else
+            {
+                <ul class="list-group mb-3">
+                    @foreach (var c in categories)
+                    {
+                        <li class="list-group-item">
+                            <strong>@c.CategoryName</strong>
+                            @if (!string.IsNullOrEmpty(c.Description))
+                            {
+                                <br />
+                                <small>@c.Description</small>
+         }
+                        </li>
+                    }
+                </ul>
+                <a asp-action="Enrol" asp-route-eventId="@Model.EventID" class="btn btn-primary w-100">Enrol Now</a>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+:root {
+    --rd-red: #e63946;
+    --rd-blue: #1d3557;
+    --rd-green: #2a9d8f;
+    --rd-amber: #f4a261;
+}
+
+body {
+    background: #f8f9fa;
+    font-family: 'Segoe UI',sans-serif;
+}
+
+.hero {
+    background: linear-gradient(135deg,var(--rd-red),var(--rd-blue));
+    color: #fff;
+    padding: 5rem 2rem;
+    border-radius: 12px;
+}
+
+.btn-primary {
+    background: var(--rd-red);
+    border-color: var(--rd-red);
+}
+
+    .btn-primary:hover {
+        background: #c92f3b;
+        border-color: #c92f3b;
+    }
+
+.badge-confirmed {
+    background: var(--rd-green);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.badge-cancelled {
+    background: #adb5bd;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.badge-pending {
+    background: var(--rd-amber);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.card-event {
+    transition: transform .2s;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+    .card-event:hover {
+        transform: translateY(-3px);
+    }

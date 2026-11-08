@@ -1,0 +1,25 @@
+﻿@model RaceDay.Web.Models.ViewModels.ResultEntryViewModel
+@{
+    ViewData["Title"] = "Results";
+}
+<h2>Results — @Model.EventName</h2>
+<table class="table mt-3">
+    <thead><tr><th>Enrolment</th><th>Capture Result</th></tr></thead>
+    <tbody>
+        @foreach (var e in Model.Enrollments)
+        {
+            <tr>
+                <td>#@e.EnrollmentID (User @e.UserID)</td>
+                <td>
+                    <form asp-action="CaptureResult" method="post" class="d-flex gap-2">
+                        <input type="hidden" name="eventId" value="@Model.EventID" />
+                        <input type="hidden" name="enrollmentId" value="@e.EnrollmentID" />
+                        <input name="finishTime" class="form-control form-control-sm" placeholder="00:42:15" style="width:120px;" required />
+                        <input name="position" type="number" class="form-control form-control-sm" placeholder="Pos" style="width:80px;" required />
+                        <button class="btn btn-sm btn-success">Save</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

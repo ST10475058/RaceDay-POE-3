@@ -1,0 +1,21 @@
+﻿@model List<RaceDay.Web.Models.DTOs.ResultDto>
+@{
+    ViewData["Title"] = "My Results";
+}
+<h2>My Results</h2>
+@if (!Model.Any())
+{
+    <p class="text-muted">No results recorded yet.</p>
+}
+else
+{
+    <table class="table mt-3">
+        <thead><tr><th>Enrolment</th><th>Finish Time</th><th>Position</th></tr></thead>
+        <tbody>
+            @foreach (var r in Model)
+            {
+                <tr><td>#@r.EnrollmentID</td><td>@r.FinishTime</td><td>@r.Position</td></tr>
+            }
+        </tbody>
+    </table>
+}

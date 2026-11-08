@@ -1,0 +1,19 @@
+﻿@model List<RaceDay.Web.Models.DTOs.EnrollmentDto>
+@{
+    ViewData["Title"] = "Enrolments";
+}
+<h2>Enrolments — @ViewBag.EventName</h2>
+<table class="table mt-3">
+    <thead><tr><th>Enrolment #</th><th>User</th><th>Date</th><th>Status</th></tr></thead>
+    <tbody>
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>#@e.EnrollmentID</td>
+                <td>User @e.UserID</td>
+                <td>@e.EnrollmentDate.ToString("dd MMM yyyy")</td>
+                <td><span class="badge-@(e.Status == "Confirmed" ? "confirmed" : "cancelled")">@e.Status</span></td>
+            </tr>
+        }
+    </tbody>
+</table>

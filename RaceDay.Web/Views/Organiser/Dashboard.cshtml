@@ -1,0 +1,31 @@
+﻿@model List<RaceDay.Web.Models.DTOs.EventDto>
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<h2 class="mb-4">Organiser Dashboard</h2>
+<div class="row mb-4">
+    <div class="col-md-4"><div class="card p-3 text-center"><h5>Total Events</h5><h2>@Model.Count</h2></div></div>
+</div>
+<a asp-action="Create" class="btn btn-primary mb-3">+ Create Event</a>
+<div class="row">
+    @foreach (var e in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card card-event">
+                <div class="card-body">
+                    <h5>@e.EventName</h5>
+                    <p class="text-muted small">@e.EventDate.ToString("dd MMM yyyy") | @e.Location</p>
+                    <span class="badge bg-secondary">@e.EventType</span> <span class="badge bg-info">@e.Distance km</span>
+                </div>
+                <div class="card-footer d-flex gap-2">
+                    <a asp-action="Edit" asp-route-id="@e.EventID" class="btn btn-sm btn-outline-primary">Edit</a>
+                    <a asp-action="Enrollments" asp-route-eventId="@e.EventID" class="btn btn-sm btn-outline-secondary">Enrolments</a>
+                    <a asp-action="Results" asp-route-eventId="@e.EventID" class="btn btn-sm btn-outline-success">Results</a>
+                    <form asp-action="Delete" asp-route-id="@e.EventID" method="post" onsubmit="return confirm('Delete?')">
+                        <button class="btn btn-sm btn-outline-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>

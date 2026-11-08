@@ -1,0 +1,18 @@
+﻿@model List<RaceDay.Web.Models.DTOs.EventDto>
+@{
+    ViewData["Title"] = "My Events";
+}
+<h2>My Enrolments</h2>
+<table class="table mt-3">
+    <thead><tr><th>Event</th><th>Date</th><th>Status</th></tr></thead>
+    <tbody>
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.EventName</td>
+                <td>@e.EventDate.ToString("dd MMM yyyy")</td>
+                <td><span class="badge-confirmed">Confirmed</span></td>
+            </tr>
+        }
+    </tbody>
+</table>

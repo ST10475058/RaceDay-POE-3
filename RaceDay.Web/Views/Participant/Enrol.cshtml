@@ -1,0 +1,18 @@
+﻿@model RaceDay.Web.Models.ViewModels.EnrollViewModel
+@{
+    ViewData["Title"] = "Enrol";
+}
+<h2>Enrol in @Model.Event.EventName</h2>
+<form asp-action="Enrol" method="post" class="card p-4">
+    <input type="hidden" asp-for="EventID" />
+    <div class="mb-3">
+        <label>Select Category</label>
+        <select asp-for="CategoryID" class="form-select" required>
+            @foreach (var c in Model.Categories)
+            {
+                <option value="@c.CategoryID">@c.CategoryName</option>
+            }
+        </select>
+    </div>
+    <button class="btn btn-primary">Confirm Enrolment</button>
+</form>

@@ -1,0 +1,13 @@
+﻿@model RaceDay.Web.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+<div class="text-center mt-5">
+    <h1 class="display-4 text-danger">⚠️ Oops!</h1>
+    <p class="lead">Something went wrong. Please try again or contact support.</p>
+    @if (Model?.ShowRequestId == true)
+    {
+        <p><strong>Request ID:</strong> <code>@Model.RequestId</code></p>
+    }
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary mt-3">Return Home</a>
+</div>
