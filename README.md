@@ -42,7 +42,7 @@ CI/CD Green Build
 
 ![Build and Test](part3-green-build.png)
 
-
+[![Build and Test](https://github.com/ST10475058/RaceDay-POE-3/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/ST10475058/RaceDay-POE-3/actions/workflows/build-and-test.yml)
 
 The GitHub Actions workflow builds the entire solution (API and MVC) on every push. All steps pass successfully.
 
