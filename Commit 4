@@ -1,0 +1,2 @@
+git add RaceDay.Web/Program.cs
+git commit -m "feat: configure Web Program.cs for Authentication and Sessions"
