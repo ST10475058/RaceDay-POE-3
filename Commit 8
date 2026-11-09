@@ -1,0 +1,2 @@
+git add RaceDay.Web/Controllers/HomeController.cs RaceDay.Web/Views/Home/
+git commit -m "feat: setup HomeController and landing page with global error handling"
