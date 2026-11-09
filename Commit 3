@@ -1,0 +1,2 @@
+git add RaceDay.Web/Services/RaceDayApiClient.cs
+git commit -m "feat: implement RaceDayApiClient for RESTful communication"
