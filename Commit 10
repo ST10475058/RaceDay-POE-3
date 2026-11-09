@@ -1,0 +1,2 @@
+git add RaceDay.Web/Views/Participant/Index.cshtml RaceDay.Web/Views/Participant/Details.cshtml RaceDay.Web/Views/Participant/Enrol.cshtml
+git commit -m "ui: add Participant views for event browsing and enrolment"
