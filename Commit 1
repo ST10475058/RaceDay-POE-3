@@ -1,0 +1,2 @@
+git add RaceDay.Web/RaceDay.Web.csproj RaceDay.Web/appsettings.json
+git commit -m "chore: initialize Part 3 MVC Web project and base configuration"
