@@ -1,0 +1,2 @@
+git add Dockerfile RaceDay.Web/Dockerfile
+git commit -m "chore: add Docker support for containerization"
