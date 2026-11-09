@@ -1,0 +1,2 @@
+git add RaceDay.Web/Controllers/AuthController.cs
+git commit -m "feat: implement AuthController for Login and Registration"
