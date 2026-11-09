@@ -1,0 +1,2 @@
+git add README.md part3-green-build.png
+git commit -m "docs: finalized README with CI/CD screenshot and Docker instructions"
