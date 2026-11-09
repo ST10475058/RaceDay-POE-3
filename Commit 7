@@ -1,0 +1,2 @@
+git add RaceDay.Web/Views/Auth/
+git commit -m "ui: add Auth views for Login, Register, and AccessDenied"
