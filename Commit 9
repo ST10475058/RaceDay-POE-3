@@ -1,0 +1,2 @@
+git add RaceDay.Web/Controllers/ParticipantController.cs
+git commit -m "feat: implement ParticipantController for event browsing and results"
