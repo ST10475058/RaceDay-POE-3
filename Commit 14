@@ -1,0 +1,2 @@
+git add RaceDay.Web/Views/Organiser/Edit.cshtml RaceDay.Web/Views/Organiser/Enrollments.cshtml
+git commit -m "ui: add Organiser Edit and Enrolments views"
