@@ -1,0 +1,2 @@
+git add RaceDay.Web/Views/Participant/MyEvents.cshtml RaceDay.Web/Views/Participant/MyResults.cshtml RaceDay.Web/Views/Participant/Profile.cshtml
+git commit -m "ui: add Participant views for personal dashboard and profile"
